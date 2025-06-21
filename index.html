@@ -11,7 +11,7 @@
             <!-- 1. Текстура для підлоги -->
             <img id="floor-texture" src="images/my_texture.jpg">
 
-            <!-- 2. 3D-модель -->
+            <!-- 2. Ваша 3D-модель -->
             <a-asset-item id="character-model" src="models/character/scene.gltf"></a-asset-item>
         </a-assets>
 
@@ -23,11 +23,11 @@
         <!-- Площина з текстурою (підлога) -->
         <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" src="#floor-texture"></a-plane>
 
-        <!-- 3D-модель -->
+        <!-- Ваша 3D-модель -->
         <!-- Позиція і розмір підібрані приблизно, можливо, доведеться їх змінити, щоб модель було добре видно -->
         <a-entity gltf-model="#character-model" position="0 0 -3" scale="1 1 1"></a-entity>
 
-        <!-- Текст з іменем та прізвищем -->
+        <!-- Текст з вашим іменем та прізвищем -->
         <a-text 
             value="Капуста Аліна" 
             font="fonts/custom-msdf.json"

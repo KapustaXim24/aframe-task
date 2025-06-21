@@ -23,18 +23,18 @@
         <!-- Площина з текстурою (підлога) -->
         <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" src="#floor-texture"></a-plane>
 
-        <!-- Ваша 3D-модель -->
-        <!-- Позиція і розмір підібрані приблизно, можливо, доведеться їх змінити, щоб модель було добре видно -->
+        <!-- Ваша 3D-модель (її положення не змінилося) -->
         <a-entity gltf-model="#character-model" position="0 0 -3" scale="1 1 1"></a-entity>
 
         <!-- Текст з вашим іменем та прізвищем -->
+        <!-- Змінено положення, щоб модель його не перекривала -->
         <a-text 
             value="Капуста Аліна" 
             font="fonts/custom-msdf.json"
             negate="false"
             color="black"
             width="8"
-            position="-4 1.5 -5" 
+            position="-5.5 1.5 -5" 
             align="center">
         </a-text>
 

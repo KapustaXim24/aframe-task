@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- === БЛОК ДЛЯ ПОПЕРЕДНЬОГО ЗАВАНТАЖЕННЯ РЕСУРСІВ === -->
+        <a-assets>
+            <!-- 1. Текстура для підлоги -->
+            <img id="floor-texture" src="images/my_texture.jpg">
+
+            <!-- 2. 3D-модель -->
+            <a-asset-item id="character-model" src="models/character/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <!-- === ОБ'ЄКТИ НА СЦЕНІ === -->
+
+        <!-- Фон сцени -->
+        <a-sky color="#87CEEB"></a-sky> <!-- Світло-блакитний колір неба -->
+
+        <!-- Площина з текстурою (підлога) -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" src="#floor-texture"></a-plane>
+
+        <!-- 3D-модель -->
+        <!-- Позиція і розмір підібрані приблизно, можливо, доведеться їх змінити, щоб модель було добре видно -->
+        <a-entity gltf-model="#character-model" position="0 0 -3" scale="1 1 1"></a-entity>
+
+        <!-- Текст з іменем та прізвищем -->
+        <a-text 
+            value="Капуста Аліна" 
+            font="fonts/custom-msdf.json"
+            negate="false"
+            color="black"
+            width="8"
+            position="-4 1.5 -5" 
+            align="center">
+        </a-text>
+
+    </a-scene>
+</body>
+</html>
